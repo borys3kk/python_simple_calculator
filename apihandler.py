@@ -1,26 +1,23 @@
 import requests
-APP_ENDPOINT = "http://api.wolframalpha.com/v2/query"
-
-params = {
-    'input' : 'x',
-    'appid' : APP_ID,
-    'format': 'image',
-    'output': 'json',
-    'width' : 700
-}
 
 class ApiHandler:
     def __init__(self):
         
         with open("api-wolfram.txt") as f:
             self.APP_ID = f.read()
-        self.APP_ENDPOINT = APP_ENDPOINT
-        self.params = params
+        self.APP_ENDPOINT = "http://api.wolframalpha.com/v2/query"
+        self.params = {
+            'input' : 'x',
+            'appid' : self.APP_ID,
+            'format': 'image',
+            'output': 'json',
+            'width' : 700
+        }
 
     def get_new_image(self, function_to_get):
         self.params['input'] = function_to_get
 
-        with requests.get(self.APP_ENDPOINT ,params=params, stream=True) as response:
+        with requests.get(self.APP_ENDPOINT ,params=self.params, stream=True) as response:
             try: 
                 data = response.json()
             except response.status_code != 200:
