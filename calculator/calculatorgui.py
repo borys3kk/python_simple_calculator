@@ -14,8 +14,6 @@ LAYOUT = [
     [sg.Button('^', size=(16,2)), sg.Button('√', size=(16,2))],
     [sg.Text('Podaj wzór funkcji: ',size=(15,1)), sg.InputText(size=(16,1)), sg.Button("2D"),  sg.Button("3D")],
 ]
-def ikskwadrat(x):
-    return x**2
 
 class CalculatorGUI:
     def __init__(self):
@@ -29,7 +27,7 @@ class CalculatorGUI:
         self.first_run = 0
         
     def open_main_window(self):
-        self.__window = sg.Window('Testing', 
+        self.__window = sg.Window('Simple calculator', 
                             layout=LAYOUT, 
                             element_justification='c', 
                             finalize=True)
@@ -42,7 +40,7 @@ class CalculatorGUI:
         popup_layout = [
         [sg.Image(f'images/{filename}.png', key='-IMAGE-')],
         ]
-        sg.Window('Wykres funkcji', 
+        sg.Window('Function plot', 
             layout=popup_layout, 
             element_justification='c', 
             finalize=True, keep_on_top=True)
