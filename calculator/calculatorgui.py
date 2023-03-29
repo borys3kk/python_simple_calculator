@@ -12,7 +12,7 @@ LAYOUT = [
     [sg.Button('1', size=C_BTN_SIZE),sg.Button('2', size=C_BTN_SIZE),sg.Button('3', size=C_BTN_SIZE),sg.Button('+', size=C_BTN_SIZE, button_color='gray') , sg.Button('-', size=C_BTN_SIZE, button_color='gray')],
     [sg.Button('C', size=C_BTN_SIZE, button_color='red'), sg.Button('0', size=C_BTN_SIZE),sg.Button('.', size=C_BTN_SIZE),sg.Button('click', size=C_BTN_SIZE), sg.Button('=', size=C_BTN_SIZE, button_color='darkblue')],
     [sg.Button('^', size=(16,2)), sg.Button('√', size=(16,2))],
-    [sg.Text('Podaj wzór funkcji: ',size=(15,1)), sg.InputText(size=(16,1)), sg.Button("2D"),  sg.Button("3D")],
+    [sg.Text('Provide function formula: ',size=(18,1)), sg.InputText(size=(16,1)), sg.Button("2D"),  sg.Button("3D")],
 ]
 
 class CalculatorGUI:
