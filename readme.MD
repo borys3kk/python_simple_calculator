@@ -34,3 +34,5 @@ python -m unittest unit_tests.py
 ## Technologies
 Project is created with:
 * Python 3.11.2
+* PySimpleGUI 4.60.4
+* requests 2.28.2
